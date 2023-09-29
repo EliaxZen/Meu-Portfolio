@@ -452,7 +452,7 @@ input:checked + .slider:before {
   }
   .projeto-conteudo {
     margin-left: 0;
-    margin-bottom: 50px;
+    margin-top: 50px;
   }
   .projeto-conteudo p {
     font-size: 15px;
