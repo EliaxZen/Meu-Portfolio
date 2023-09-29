@@ -90,7 +90,7 @@ overflow-x: hidden;
   z-index: 999;
   border-bottom-left-radius: 5px;
   scroll-behavior: smooth;
-  animation:fadeInRightBig 0.3s;
+  animation:fadeInRightBig 0.01s;
 }
 .menu--mobile.dark {
   background: transparent;
@@ -124,7 +124,6 @@ overflow-x: hidden;
   text-decoration: none;
   color: #FFF;
   font-size: 20px;
-  font-family: 'Dancing Script';
   font-weight: 700;
 }
 .menu--mobile nav ul li a:hover {
