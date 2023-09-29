@@ -124,7 +124,7 @@ overflow-x: hidden;
   text-decoration: none;
   color: #FFF;
   font-size: 20px;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script';
   font-weight: 700;
 }
 .menu--mobile nav ul li a:hover {
