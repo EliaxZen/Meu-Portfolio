@@ -97,7 +97,7 @@ overflow-x: hidden;
   backdrop-filter: blur( 1.5px );
   -webkit-backdrop-filter: blur( 1.5px );
   z-index: 999;
-  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 10px;
   scroll-behavior: smooth;
   animation:fadeInRightBig 0.3s;
 }
