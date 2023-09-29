@@ -132,7 +132,7 @@ overflow-x: hidden;
   color: #FFF;
   font-size: 20px;
   font-family: 'Dancing Script', cursive;
-  font-weight: 700;
+  font-weight: bold;
 }
 .menu--mobile nav ul li a:hover {
   border-bottom: 4px solid #2e84e7;
