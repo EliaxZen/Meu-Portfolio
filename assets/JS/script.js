@@ -11,7 +11,9 @@ toggle.addEventListener('change', () => {
   header.classList.toggle('dark');
   main.classList.toggle('dark');
   footer.classList.toggle('dark');
-  menuMobile.classList.toggle('dark')
+  menuMobile.classList.toggle('dark');
+  document.querySelector('.parede').classList.toggle('dark');
+  document.querySelector('.container').classList.toggle('dark');
 });
 
 menuHamburguer.addEventListener('click', () => {
