@@ -305,6 +305,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: calc(100vh - 80px);
   border: 1px solid #ffffff;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -428,8 +429,9 @@ input:checked + .slider:before {
     padding-right: 10px;
   }
   .sobre-mim {
+    justify-content: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px;
   }
   .sobre-mim .avatar img {
     width: 150px;
@@ -445,6 +447,7 @@ input:checked + .slider:before {
 
   .projeto {
     flex-direction: column;
+    padding: 20px;
   }
   .projeto-image img {
     width: 150px;
