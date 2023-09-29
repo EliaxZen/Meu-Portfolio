@@ -43,11 +43,17 @@ overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
+.container.dark {
+  background-color: hsl(0, 0%, 0%);
+}
 
 .parede {
   width: 100%;
   height: 80px;
   background-color: hsl(0, 0%, 100%);
+}
+.parede.dark {
+  background-color: hsl(0, 0%, 0%);
 }
 
 /*Cabeçalho*/
@@ -71,8 +77,8 @@ overflow-x: hidden;
   scroll-behavior: smooth;
 }
 .header.dark {
-  background: transparent;
-  background-image: linear-gradient(135deg, #000000 0%, #000000 100%);
+  background: #00000046;
+  background-image: linear-gradient(135deg, #00000028 0%, #0000002e 100%);
   backdrop-filter: blur( 1.5px );
   -webkit-backdrop-filter: blur( 1.5px );
 }
@@ -299,10 +305,10 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: calc(100vh - 80px);
   border: 1px solid #ffffff;
   border-radius: 15px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .sobre-mim .avatar {
   display: flex;
@@ -311,8 +317,6 @@ input:checked + .slider:before {
   animation:zoomInDown 1.5s;
 }
 .sobre-mim .avatar img {
-  width: 500px;
-  height: 70vh;
   animation:pulse 5s infinite;
 }
 .sobre-mim .conteudo {
@@ -433,6 +437,7 @@ input:checked + .slider:before {
   }
   .sobre-mim .conteudo {
     margin-left: 0;
+    margin-top: 20px;
   }
   .conteudo p {
     font-size: 15px;
@@ -447,7 +452,7 @@ input:checked + .slider:before {
   }
   .projeto-conteudo {
     margin-left: 0;
-    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .projeto-conteudo p {
     font-size: 15px;
