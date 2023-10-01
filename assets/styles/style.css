@@ -393,7 +393,7 @@ input:checked + .slider:before {
   font-size: 40px;
   color: #156db5;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0px 0px 10px #2196F3;
+  text-shadow: 0px 0px 0px #2196F3;
 }
 .links-deploy-repo {
   margin-top: 40px;
