@@ -635,6 +635,9 @@ input:checked + .slider:before {
   .projetos h1 {
     font-size: 30px;
   }
+.projetos-h1 {
+    font-size: 40px;
+}
 
   .footer {
     padding-left: 10px;
