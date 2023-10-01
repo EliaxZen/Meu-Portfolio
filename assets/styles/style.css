@@ -633,7 +633,7 @@ input:checked + .slider:before {
     margin-bottom: 0;
   }
   .projetos h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .footer {
