@@ -5,7 +5,7 @@ let main = document.querySelector('.main');
 let footer = document.querySelector('.footer');
 let menuMobile = document.querySelector('.menu--mobile')
 let menuHamburguer = document.querySelector('.nav--mode .menu');
-let verMaisBotao = document.querySelector('.ver-mais--button button a');
+let verMaisBotao = document.querySelector('.ver-mais--button button');
 
 // Events
 toggle.addEventListener('change', () => {
