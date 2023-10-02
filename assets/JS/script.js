@@ -15,6 +15,17 @@ toggle.addEventListener('change', () => {
   menuMobile.classList.toggle('dark');
   document.querySelector('.parede').classList.toggle('dark');
   document.querySelector('.container').classList.toggle('dark');
+  document.querySelector('.logo h1').classList.toggle('dark');
+  document.querySelector('.link1').classList.toggle('dark');
+  document.querySelector('.link2').classList.toggle('dark');
+  document.querySelector('.link3').classList.toggle('dark');
+  document.querySelector('.sobre-mim .conteudo p').classList.toggle('dark');
+  document.querySelector('.projeto-conteudo .p1').classList.toggle('dark');
+  document.querySelector('.projeto-conteudo .p2').classList.toggle('dark');
+  document.querySelector('.projeto-conteudo .p3').classList.toggle('dark');
+  document.querySelector('.projeto-conteudo .p4').classList.toggle('dark');
+  document.querySelector('.projeto-conteudo .p5').classList.toggle('dark');
+  document.querySelector('.projetos h1').classList.toggle('dark');
 });
 
 menuHamburguer.addEventListener('click', () => {
@@ -47,3 +58,4 @@ verMaisBotao.addEventListener('click', () => {
     verMaisBotao.innerHTML = 'Ver menos'
   }
 });
+
