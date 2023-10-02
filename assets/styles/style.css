@@ -759,7 +759,7 @@ input:checked + .slider:before {
   }
   .contato {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
     height: calc(100vh - 80px);
     justify-content: space-evenly;
