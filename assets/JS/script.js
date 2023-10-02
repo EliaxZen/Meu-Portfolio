@@ -26,6 +26,10 @@ toggle.addEventListener('change', () => {
   document.querySelector('.projeto-conteudo .p4').classList.toggle('dark');
   document.querySelector('.projeto-conteudo .p5').classList.toggle('dark');
   document.querySelector('.projetos h1').classList.toggle('dark');
+  document.querySelector('.caixa-recado h1').classList.toggle('dark');
+  document.querySelector('.caixa-recado p').classList.toggle('dark');
+  document.querySelector('.caixa-recado .email').classList.toggle('dark');
+  document.querySelector('.caixa-recado .message').classList.toggle('dark');
 });
 
 menuHamburguer.addEventListener('click', () => {
