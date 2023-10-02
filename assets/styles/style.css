@@ -28,14 +28,6 @@
   text-decoration: none;
 }
 
-body {
-width: 100%;
-scroll-behavior: smooth;
-display: flex;
-flex-direction: column;
-overflow-x: hidden;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -157,6 +149,9 @@ overflow-x: hidden;
   cursor: pointer;
   animation:backInRight 0.6s;
 }
+.logo h1.dark {
+  color: #FFF;
+}
 .logo h1:hover {
   border-radius: 2px;
   color: #2196F3;
@@ -178,6 +173,15 @@ overflow-x: hidden;
   margin-left: 20px;
   font-size: 20px;
   font-weight: 700;
+}
+.link1.dark {
+  color: #FFF;
+}
+.link2.dark {
+  color: #FFF;
+}
+.link3.dark {
+  color: #FFF;
 }
 .nav--mode nav ul li a:hover {
   border-bottom: 4px solid #2196F3;
@@ -315,9 +319,13 @@ input:checked + .slider:before {
 }
 .sobre-mim .avatar img {
   width: 350px;
-  height: 350px;
+  height: 400px;
   border-radius: 50%;
+  border: 10px outset #8bc5ec;
+}
+.sobre-mim .avatar img:hover {
   box-shadow: 0px 0px 30px #FFF;
+  transition: all 0.5s ease-in-out;
 }
 .sobre-mim .conteudo {
   display: flex;
@@ -334,6 +342,9 @@ input:checked + .slider:before {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 40px;
   font-weight: 700;
+}
+.conteudo p.dark {
+  color: #FFF;
 }
 .link--certificado {
   text-decoration: underline;
@@ -356,8 +367,12 @@ input:checked + .slider:before {
   margin-bottom: 10px;
 }
 .projetos h1 {
-  font-size: 50px;
+  font-size: 60px;
   margin-bottom: 50px;
+  color: #2e84e7;
+}
+.projetos h1.dark {
+  color: #2e84e7;
 }
 .projeto {
   display: flex;
@@ -382,7 +397,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 45%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -390,10 +405,11 @@ input:checked + .slider:before {
   border-radius: 10px;
 }
 .projeto-image h1 {
-  font-size: 40px;
-  color: #156db5;
+  font-size: 50px;
+  color: #2e84e7;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0px 0px 0px #2196F3;
+  font-weight: bold;
+  border-bottom: 2px solid #FFF;
 }
 .links-deploy-repo {
   margin-top: 40px;
@@ -430,8 +446,8 @@ input:checked + .slider:before {
   box-shadow: 0px 0px 10px #FFF;
 }
 .link-deploy img:hover {
-  background-color: #2196F3;
-  border: 2px solid #2196F3;
+  box-shadow: 0px 0px 50px #FFF;
+  transition: all 0.5s ease-in-out;
 }
 .link-repositorio img {
   display: flex;
@@ -446,13 +462,16 @@ input:checked + .slider:before {
   box-shadow: 0px 0px 10px #FFF;
 }
 .link-repositorio img:hover {
-  background-color: #2196F3;
-  border: 2px solid #2196F3;
+  box-shadow: 0px 0px 50px #FFF;
+  transition: all 0.5s ease-in-out;
 }
 .projeto-image img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px #FFF;
+}
+.projeto-image img:hover {
+  box-shadow: 0px 0px 30px #FFF;
+  transition: all 0.5s ease-in-out;
 }
 .projeto-conteudo {
   display: flex;
@@ -466,11 +485,28 @@ input:checked + .slider:before {
 }
 .projeto-conteudo p {
   height: 100%;
+  line-height: 50px;
   font-size: 25px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700
 }
+.projeto-conteudo .p1.dark {
+  color: #FFF;
+}
+.projeto-conteudo .p2.dark {
+  color: #FFF;
+}
+.projeto-conteudo .p3.dark {
+  color: #FFF;
+}
+.projeto-conteudo .p4.dark {
+  color: #FFF;
+}
+.projeto-conteudo .p5.dark {
+  color: #FFF;
+}
+
 .projeto-bar {
   width: 90%;
   height: 5px;
@@ -567,7 +603,7 @@ input:checked + .slider:before {
   }
   .sobre-mim .avatar img {
     width: 150px;
-    height: 150px;
+    height: 200px;
   }
   .sobre-mim .conteudo {
     margin-left: 0;
@@ -608,14 +644,14 @@ input:checked + .slider:before {
   }
 
   .projeto-image {
-    width: 90%;
+    width: 100%;
     height: 150px;
     cursor: pointer;
     padding: 0;
     margin-bottom: 20px;
   }
   .projeto-image img {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   .projeto-conteudo {
@@ -631,13 +667,14 @@ input:checked + .slider:before {
     font-weight: 700;
     font-size: 15px;
     margin-bottom: 0;
+    line-height: 40px;
   }
   .projetos h1 {
     font-size: 30px;
   }
-.projetos-h1 {
-    font-size: 40px;
-}
+  .projeto-image h1 {
+    font-size: 25px;
+  }
 
   .footer {
     padding-left: 10px;
