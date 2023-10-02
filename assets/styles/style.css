@@ -558,9 +558,85 @@ input:checked + .slider:before {
   text-align: center;
   color: #FFF;
 }
+.contato {
+  display: flex;
+  height: calc(100vh - 80px);
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 3px solid #ffffff;
+  box-shadow: 0px 0px 10px #FFF;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 50px;
+}
+
+.caixa-recado {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.caixa-recado h1{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  text-align: start;
+}
+.caixa-recado h1.dark {
+  color: #FFF;
+}
+.caixa-recado p{
+  text-align: start;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.caixa-recado p.dark {
+  color: #FFF;
+}
+.caixa-recado .email {
+  font-family:  Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-bottom: 2px solid #2196F3;
+}
+.caixa-recado .email.dark {
+  color: #FFF;
+}
+.icons {
+  margin-top: 20px;
+}
+.linkedin-icon {
+  width: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.zap {
+  width: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.avatar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-icon img {
+  width: 500px;
+  animation:pulse 5s infinite;
+}
 .footer.dark {
   background-color: rgb(0, 0, 0);
   background-image: none;
+  color: #FFF;
+}
+.caixa-recado .atencao {
+  font-size: 120px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.caixa-recado .atencao.dark {
   color: #FFF;
 }
 
@@ -681,6 +757,80 @@ input:checked + .slider:before {
     padding-right: 10px;
     padding-bottom: 10px;
   }
+  .contato {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 10px #FFF;
+    border-radius: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+  }
+  
+  .caixa-recado {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .caixa-recado h1{
+    width: 100%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    text-align: start;
+    line-height: 30px;
+  }
+  .caixa-recado p{
+    width: 100%;
+    text-align: start;
+    font-size: 13px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .caixa-recado .email {
+    width: 100%;
+    text-align: start;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid #2196F3;
+  }
+  .icons {
+    margin-top: 20px;
+    display: flex;
+  }
+  .linkedin-icon {
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .zap {
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .avatar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-icon img {
+    width: 180px;
+    animation:pulse 5s infinite;
+  }
+  .caixa-recado .atencao {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 
 /* Extra small devices */
@@ -721,7 +871,7 @@ input:checked + .slider:before {
   }
   .sobre-mim .avatar img {
     width: 150px;
-    height: 150px;
+    height: 200px;
   }
   .sobre-mim .conteudo {
     margin-left: 0;
@@ -762,13 +912,14 @@ input:checked + .slider:before {
   }
 
   .projeto-image {
-    width: 90%;
+    width: 100%;
     height: 150px;
     cursor: pointer;
     padding: 0;
+    margin-bottom: 20px;
   }
   .projeto-image img {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   .projeto-conteudo {
@@ -784,15 +935,93 @@ input:checked + .slider:before {
     font-weight: 700;
     font-size: 15px;
     margin-bottom: 0;
+    line-height: 40px;
   }
   .projetos h1 {
-    font-size: 20px;
+    font-size: 30px;
+  }
+  .projeto-image h1 {
+    font-size: 25px;
   }
 
   .footer {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
+  }
+  .contato {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 10px #FFF;
+    border-radius: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+  }
+  
+  .caixa-recado {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .caixa-recado h1{
+    width: 100%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    text-align: start;
+    line-height: 30px;
+  }
+  .caixa-recado p{
+    width: 100%;
+    text-align: start;
+    font-size: 13px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .caixa-recado .email {
+    width: 100%;
+    text-align: start;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid #2196F3;
+  }
+  .icons {
+    margin-top: 20px;
+    display: flex;
+  }
+  .linkedin-icon {
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .zap {
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .avatar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-icon img {
+    width: 180px;
+    animation:pulse 5s infinite;
+  }
+  .caixa-recado .atencao {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
