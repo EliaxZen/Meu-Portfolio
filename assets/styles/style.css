@@ -822,7 +822,7 @@ input:checked + .slider:before {
     justify-content: center;
   }
   .avatar-icon img {
-    width: 80%;
+    width: 90%;
     animation:pulse 5s infinite;
   }
   .caixa-recado .atencao {
