@@ -761,7 +761,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     justify-content: center;
     align-items: center;
     border: 3px solid #ffffff;
@@ -802,7 +802,7 @@ input:checked + .slider:before {
     border-bottom: 2px solid #2196F3;
   }
   .icons {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
   }
   .linkedin-icon {
@@ -826,8 +826,8 @@ input:checked + .slider:before {
     animation:pulse 5s infinite;
   }
   .caixa-recado .atencao {
-    margin-top: 10px;
-    font-size: 90px;
+    margin-top: 40px;
+    font-size: 100px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
   }
