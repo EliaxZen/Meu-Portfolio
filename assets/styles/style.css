@@ -560,7 +560,7 @@ input:checked + .slider:before {
 }
 .contato {
   display: flex;
-  
+  height: calc(100vh - 80px);
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
@@ -827,7 +827,7 @@ input:checked + .slider:before {
   }
   .caixa-recado .atencao {
     margin-top: 10px;
-    font-size: 50px;
+    font-size: 90px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
   }
