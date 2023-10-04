@@ -376,7 +376,11 @@ input:checked + .slider:before {
   font-size: 60px;
   margin-bottom: 50px;
   margin-top: 50px;
-  color: #3f47cc;
+  color: #496b87;
+  font-weight: 700;
+}
+.projetos h1.dark {
+  color: #FFF;
 }
 
 .projeto {
@@ -411,10 +415,13 @@ input:checked + .slider:before {
 }
 .projeto-image h1 {
   font-size: 50px;
-  color: #3f47cc;
+  color: #496b87;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   border-bottom: 2px solid #FFF;
+}
+.projeto-image h1.dark {
+  color: #FFF;
 }
 .links-deploy-repo {
   margin-top: 40px;
@@ -494,7 +501,7 @@ input:checked + .slider:before {
   font-size: 25px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700
+  font-weight: normal
 }
 .projeto-conteudo .p1.dark {
   color: #FFF;
