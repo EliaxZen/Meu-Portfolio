@@ -305,23 +305,27 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 10px #FFF;
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   padding: 50px;
+
+
 }
 .sobre-mim .avatar {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation:backInDown 1s;
 }
 .sobre-mim .avatar img {
-  width: 350px;
-  height: 400px;
+  width: 450px;
+  height: 500px;
   border-radius: 50%;
-  border: 10px outset #8bc5ec;
+  border: 10px solid #496b87;
+
 }
 .sobre-mim .avatar img:hover {
   box-shadow: 0px 0px 30px #FFF;
@@ -333,6 +337,8 @@ input:checked + .slider:before {
   width: 100%;
   margin-left: 50px;
   overflow-y: scroll;
+  overflow-x: none;
+  animation:backInDown 1s;
 }
 .conteudo p {
   padding: 20px;
@@ -369,11 +375,10 @@ input:checked + .slider:before {
 .projetos h1 {
   font-size: 60px;
   margin-bottom: 50px;
-  color: #2e84e7;
+  margin-top: 50px;
+  color: #3f47cc;
 }
-.projetos h1.dark {
-  color: #2e84e7;
-}
+
 .projeto {
   display: flex;
   align-items: center;
@@ -406,7 +411,7 @@ input:checked + .slider:before {
 }
 .projeto-image h1 {
   font-size: 50px;
-  color: #2e84e7;
+  color: #3f47cc;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   border-bottom: 2px solid #FFF;
@@ -466,7 +471,7 @@ input:checked + .slider:before {
   transition: all 0.5s ease-in-out;
 }
 .projeto-image img {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
 }
 .projeto-image img:hover {
@@ -523,7 +528,7 @@ input:checked + .slider:before {
   flex-direction: column;
   width: 100%;
   z-index: 10;
-  animation:fadeInLeft 0.5s;
+  animation:fadeInLeft 1s;
 }
 .ver-mais--button {
   display: flex;
@@ -560,7 +565,7 @@ input:checked + .slider:before {
 }
 .contato {
   display: flex;
-  height: calc(100vh - 80px);
+  height: 100%;
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
@@ -678,8 +683,8 @@ input:checked + .slider:before {
     padding: 20px;
   }
   .sobre-mim .avatar img {
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
   }
   .sobre-mim .conteudo {
     margin-left: 0;
@@ -721,13 +726,12 @@ input:checked + .slider:before {
 
   .projeto-image {
     width: 100%;
-    height: 150px;
     cursor: pointer;
     padding: 0;
     margin-bottom: 20px;
   }
   .projeto-image img {
-    width: 90%;
+    width: 80%;
     height: 100%;
   }
   .projeto-conteudo {
@@ -761,7 +765,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100%;
     justify-content: center;
     align-items: center;
     border: 3px solid #ffffff;
@@ -870,8 +874,8 @@ input:checked + .slider:before {
     padding: 20px;
   }
   .sobre-mim .avatar img {
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
   }
   .sobre-mim .conteudo {
     margin-left: 0;
@@ -913,13 +917,12 @@ input:checked + .slider:before {
 
   .projeto-image {
     width: 100%;
-    height: 150px;
     cursor: pointer;
     padding: 0;
     margin-bottom: 20px;
   }
   .projeto-image img {
-    width: 90%;
+    width: 80%;
     height: 100%;
   }
   .projeto-conteudo {
@@ -951,10 +954,10 @@ input:checked + .slider:before {
   }
   .contato {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
-    height: calc(100vh - 80px);
-    justify-content: space-evenly;
+    height: 100%;
+    justify-content: center;
     align-items: center;
     border: 3px solid #ffffff;
     box-shadow: 0px 0px 10px #FFF;
@@ -966,23 +969,22 @@ input:checked + .slider:before {
   .caixa-recado {
     display: flex;
     width: 100%;
-    height: 100%;
     flex-direction: column;
     align-items: flex-start;
     overflow: hidden;
   }
   .caixa-recado h1{
     width: 100%;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 0px;
+    margin-top: 40px;
     text-align: start;
     line-height: 30px;
   }
   .caixa-recado p{
     width: 100%;
     text-align: start;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 30px;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -994,7 +996,7 @@ input:checked + .slider:before {
     border-bottom: 2px solid #2196F3;
   }
   .icons {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
   }
   .linkedin-icon {
@@ -1014,14 +1016,202 @@ input:checked + .slider:before {
     justify-content: center;
   }
   .avatar-icon img {
-    width: 180px;
+    width: 80%;
     animation:pulse 5s infinite;
   }
   .caixa-recado .atencao {
-    margin-top: 10px;
-    font-size: 50px;
+    font-size: 120px;
+    margin-top: 40px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
   }
 }
 
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .logo h1 {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .nav--mode nav {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .switch {
+    animation:backInRight 1.1s;
+    margin-left: 20px;
+  }
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .sobre-mim {
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .sobre-mim .avatar img {
+    width: 250px;
+    height: 300px;
+  }
+  .sobre-mim .conteudo {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .conteudo p {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .projeto {
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0;
+  }
+  .projeto-image--conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .link-deploy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .link-repositorio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .projeto-image {
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .projeto-image img {
+    width: 80%;
+    height: 100%;
+  }
+  .projeto-conteudo {
+    width: 95%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  .projeto-conteudo p {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+  .projetos h1 {
+    font-size: 30px;
+  }
+  .projeto-image h1 {
+    font-size: 25px;
+  }
+
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .contato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 10px #FFF;
+    border-radius: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+  }
+  
+  .caixa-recado {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .caixa-recado h1{
+    width: 100%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    text-align: start;
+    line-height: 30px;
+  }
+  .caixa-recado p{
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .caixa-recado .email {
+    width: 100%;
+    text-align: start;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid #2196F3;
+  }
+  .icons {
+    margin-top: 40px;
+    display: flex;
+  }
+  .linkedin-icon {
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .zap {
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .avatar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar-icon img {
+    width: 80%;
+    animation:pulse 5s infinite;
+  }
+  .caixa-recado .atencao {
+    font-size: 120px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
