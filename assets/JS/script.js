@@ -19,6 +19,7 @@ toggle.addEventListener('change', () => {
   document.querySelector('.link1').classList.toggle('dark');
   document.querySelector('.link2').classList.toggle('dark');
   document.querySelector('.link3').classList.toggle('dark');
+  document.querySelector('.link4').classList.toggle('dark');
   document.querySelector('.sobre-mim .conteudo p').classList.toggle('dark');
   document.querySelector('.projeto-conteudo .p1').classList.toggle('dark');
   document.querySelector('.projeto-conteudo .p2').classList.toggle('dark');
