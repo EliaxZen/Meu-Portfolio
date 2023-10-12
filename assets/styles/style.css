@@ -186,6 +186,9 @@
 .link3.dark {
   color: #FFF;
 }
+.link4.dark {
+  color: #FFF;
+}
 .nav--mode nav ul li a:hover {
   border-bottom: 4px solid #2196F3;
   border-radius: 2px;
