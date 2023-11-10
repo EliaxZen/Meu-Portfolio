@@ -328,7 +328,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation:backInDown 1s;
+  animation:fadeInUp 2s;
 }
 .sobre-mim .avatar img {
   width: 400px;
@@ -348,13 +348,13 @@ input:checked + .slider:before {
   margin-left: 50px;
   overflow-y: scroll;
   overflow-x: none;
-  animation:backInDown 1s;
+  animation:fadeInUp 2s;
 }
 .conteudo p {
   padding: 20px;
   height: 100%;
   font-size: 25px;
-  text-align:center;
+  text-align:left;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 40px;
   font-weight: 700;
