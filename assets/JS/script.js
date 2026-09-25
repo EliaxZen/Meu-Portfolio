@@ -1,66 +1,61 @@
-// Initial Data
-let toggle = document.querySelector('.mode .switch input');
-let header = document.querySelector('.header');
-let main = document.querySelector('.main');
-let footer = document.querySelector('.footer');
-let menuMobile = document.querySelector('.menu--mobile')
-let menuHamburguer = document.querySelector('.nav--mode .menu');
-let verMaisBotao = document.querySelector('.ver-mais--button button');
+const root = document.documentElement;
+const header = document.querySelector('.site-header');
+const nav = document.querySelector('#site-nav');
+const menuToggle = document.querySelector('.menu-toggle');
+const themeToggle = document.querySelector('.theme-toggle');
 
-// Events
-toggle.addEventListener('change', () => {
-  header.classList.toggle('dark');
-  main.classList.toggle('dark');
-  footer.classList.toggle('dark');
-  menuMobile.classList.toggle('dark');
-  document.querySelector('.parede').classList.toggle('dark');
-  document.querySelector('.container').classList.toggle('dark');
-  document.querySelector('.logo h1').classList.toggle('dark');
-  document.querySelector('.link1').classList.toggle('dark');
-  document.querySelector('.link2').classList.toggle('dark');
-  document.querySelector('.link3').classList.toggle('dark');
-  document.querySelector('.link4').classList.toggle('dark');
-  document.querySelector('.sobre-mim .conteudo p').classList.toggle('dark');
-  document.querySelector('.projeto-conteudo .p1').classList.toggle('dark');
-  document.querySelector('.projeto-conteudo .p2').classList.toggle('dark');
-  document.querySelector('.projeto-conteudo .p3').classList.toggle('dark');
-  document.querySelector('.projeto-conteudo .p4').classList.toggle('dark');
-  document.querySelector('.projeto-conteudo .p5').classList.toggle('dark');
-  document.querySelector('.projetos h1').classList.toggle('dark');
-  document.querySelector('.caixa-recado h1').classList.toggle('dark');
-  document.querySelector('.caixa-recado p').classList.toggle('dark');
-  document.querySelector('.caixa-recado .email').classList.toggle('dark');
-  document.querySelector('.caixa-recado .message').classList.toggle('dark');
+function currentTheme() {
+  const explicitTheme = root.getAttribute('data-theme');
+  if (explicitTheme) return explicitTheme;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = currentTheme() === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', nextTheme);
+  try {
+    localStorage.setItem('theme', nextTheme);
+  } catch (e) {}
 });
 
-menuHamburguer.addEventListener('click', () => {
-  if(menuMobile.style.display == 'flex') {
-    menuMobile.style.display = 'none'
-  }else {
-    menuMobile.style.display = 'flex'
-  }
+function setMenuOpen(isOpen) {
+  nav.classList.toggle('is-open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+}
+
+menuToggle.addEventListener('click', () => {
+  setMenuOpen(!nav.classList.contains('is-open'));
 });
 
-main.addEventListener('click', () => {
-  if(menuMobile.style.display == 'flex') {
-    menuMobile.style.display = 'none'
-  }
-});
-footer.addEventListener('click', () => {
-  if(menuMobile.style.display == 'flex') {
-    menuMobile.style.display = 'none'
-  }
+nav.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMenuOpen(false));
 });
 
-verMaisBotao.addEventListener('click', () => {
-  let verMais = document.querySelector('.ver-mais');
-
-  if(verMais.style.display == 'flex') {
-    verMais.style.display = 'none'
-    verMaisBotao.innerHTML = 'Ver mais'
-  } else {
-    verMais.style.display = 'flex'
-    verMaisBotao.innerHTML = 'Ver menos'
-  }
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuOpen(false);
 });
 
+let pendingReveals = Array.from(document.querySelectorAll('.reveal'));
+
+function revealSectionsInView() {
+  const revealLine = window.innerHeight * 0.9;
+  pendingReveals = pendingReveals.filter((section) => {
+    if (section.getBoundingClientRect().top < revealLine) {
+      section.classList.add('is-visible');
+      return false;
+    }
+    return true;
+  });
+}
+
+function handleScroll() {
+  header.classList.toggle('is-scrolled', window.scrollY > 8);
+  revealSectionsInView();
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
+window.addEventListener('resize', revealSectionsInView);
+handleScroll();
+
+document.getElementById('ano-atual').textContent = new Date().getFullYear();
