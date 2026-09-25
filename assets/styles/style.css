@@ -491,6 +491,18 @@ ol {
   font-size: clamp(1.1rem, 1.8vw, 1.35rem);
 }
 
+/* Aprendizados */
+.growth .stack__list > div {
+  grid-template-columns: 140px 1fr;
+}
+
+.growth .stack__list dd {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink-soft);
+  max-width: 68ch;
+}
+
 /* Timeline */
 .timeline__item {
   display: grid;
