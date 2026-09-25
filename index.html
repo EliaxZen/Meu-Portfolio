@@ -172,69 +172,97 @@
         <p class="section__index mono">04</p>
         <h2 class="section__title">Entregas</h2>
       </div>
-      <p class="projects__intro">Três entregas em produção na Log Manager, numa plataforma de logística que conecta transportadoras, sellers e marketplaces. O código é interno.</p>
+      <p class="projects__intro">Quatro entregas em produção na Log Manager. O código é interno. Onde a funcionalidade é pública, deixei o artigo da base de ajuda.</p>
 
       <article class="case">
         <p class="mono case__index">01</p>
         <div class="project__info">
-          <p class="mono project__tech">Laravel · MySQL · PDF · ZPL</p>
-          <h3>Módulo de devoluções</h3>
+          <p class="mono project__tech">Laravel · canal de vendas · webhooks</p>
+          <h3>Integração Amazon Flash</h3>
           <dl class="case__points">
             <div>
               <dt>Problema</dt>
-              <dd>A operação devolvia pedidos sem um fluxo único de conferência, etiqueta e chamado.</dd>
+              <dd>A Amazon Flash entrega no mesmo dia, e a transportadora não recebia esses pedidos no painel nem devolvia o status no padrão do canal.</dd>
             </div>
             <div>
               <dt>O que fiz</dt>
-              <dd>Construi o módulo do zero: bipagem validada pelo status do pedido, romaneio, etiquetas PDF e ZPL com QR code, e abertura de chamado com prazo dentro de uma transação, em fases.</dd>
+              <dd>Abri o canal Amazon Flash. O vendedor informa os dados, a conta nasce nesse canal e o fluxo segue para a autorização na Amazon, com uma tela que consulta até a sincronização terminar. Na lista de clientes, a transportadora copia um link de sincronização, no mesmo modelo de Mercado Livre e Shopee. O token da integração fica em cache e se renova sozinho. O status sai pelo webhook do canal, e o código de rastreio segue o padrão da Amazon sem mexer nos outros canais.</dd>
             </div>
             <div>
               <dt>Resultado</dt>
-              <dd>A devolução passou a sair da tela, com regra por empresa e sem chamado duplicado.</dd>
+              <dd>Depois da autorização, os pedidos aparecem em Todos os Pedidos, no filtro Amazon Flash.</dd>
             </div>
           </dl>
+          <p class="project__links">
+            <a class="text-link" href="https://ajuda.logmanager.com.br/docs/como-integrar-um-vendedor-da-amazon-ao-seu-painel/" target="_blank" rel="noopener noreferrer">Ver na base de ajuda ↗</a>
+          </p>
         </div>
       </article>
 
       <article class="case">
         <p class="mono case__index">02</p>
         <div class="project__info">
-          <p class="mono project__tech">Laravel · MySQL · filas</p>
-          <h3>Central de logs de auditoria</h3>
+          <p class="mono project__tech">Laravel · MySQL · JSON</p>
+          <h3>Central de logs</h3>
           <dl class="case__points">
             <div>
               <dt>Problema</dt>
-              <dd>Suporte e operação não tinham um registro claro de quem alterou cadastro, preço, permissão ou configuração.</dd>
+              <dd>As alterações ficavam espalhadas. Suporte e transportadora não viam, num só lugar, quem mudou o quê.</dd>
             </div>
             <div>
               <dt>O que fiz</dt>
-              <dd>Criei a trilha com o antes e o depois em mais de dez fluxos. A gravação foi para a fila, e a autoria continua certa quando o suporte entra na conta do cliente.</dd>
+              <dd>Centralizei os eventos numa tabela só, com antes e depois em JSON (campo, valor antigo e valor novo). A tela da transportadora e a da intranet filtram por data, categoria, ação e pelo registro: cliente, conta, motorista, usuário, tabela de preço, grupo, parceria e subacesso. Quando o suporte entra na conta do cliente, o log guarda o autor real.</dd>
             </div>
             <div>
               <dt>Resultado</dt>
-              <dd>Dá para saber quem mudou o quê. A gravação do log deixou de estar copiada em vários pontos do sistema.</dd>
+              <dd>A operação acompanha criação, atualização, exclusão e erro em clientes, contas, motoristas, preços, usuários, permissões e configurações do aplicativo e do TMS.</dd>
             </div>
           </dl>
+          <p class="project__links">
+            <a class="text-link" href="https://ajuda.logmanager.com.br/docs/central-de-logs/" target="_blank" rel="noopener noreferrer">Ver na base de ajuda ↗</a>
+          </p>
         </div>
       </article>
 
       <article class="case">
         <p class="mono case__index">03</p>
         <div class="project__info">
-          <p class="mono project__tech">API REST · RabbitMQ · MySQL</p>
-          <h3>API de status para transportadoras</h3>
+          <p class="mono project__tech">Laravel · MySQL · A4 · ZPL</p>
+          <h3>Tela de devolução de pedidos</h3>
           <dl class="case__points">
             <div>
               <dt>Problema</dt>
-              <dd>Transportadoras parceiras precisavam atualizar o status do pedido sem usar a tela interna.</dd>
+              <dd>A devolução era lenta e sem um fluxo padrão: bipar, mudar o status, imprimir e acompanhar ficavam em telas separadas.</dd>
             </div>
             <div>
               <dt>O que fiz</dt>
-              <dd>Desenhei a API com token, limite de requisições, recusa do que já tinha sido processado e checagem de que o pedido é de quem chama. O processamento entrou na fila que já existia.</dd>
+              <dd>Fiz a tela no modelo da saída de pedidos. A bipagem mostra os dados do pedido, o romaneio atualiza o status para o setor de devolução e a tela seguinte lista os pedidos com impressão da etiqueta e do romaneio. Cada transportadora escolhe se só muda o status ou se gera uma etiqueta nova, em A4 ou ZPL. Ao concluir, abre um chamado de devolução com prazo, sem duplicar o mesmo pedido.</dd>
             </div>
             <div>
               <dt>Resultado</dt>
-              <dd>Os parceiros ganharam um contrato estável, e o pedido segue o mesmo caminho do restante da operação.</dd>
+              <dd>A transportadora trata a devolução num fluxo só, com a regra que ela mesma configurou.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case">
+        <p class="mono case__index">04</p>
+        <div class="project__info">
+          <p class="mono project__tech">Laravel · API REST</p>
+          <h3>API de atualização de status</h3>
+          <dl class="case__points">
+            <div>
+              <dt>Problema</dt>
+              <dd>No bip do pacote, o sistema da transportadora já identifica o motorista. O recebimento físico no Log Manager ainda dependia de alguém lançar o status na tela.</dd>
+            </div>
+            <div>
+              <dt>O que fiz</dt>
+              <dd>Criei um endpoint no mesmo grupo das APIs da transportadora, com o token que elas já usam. A request manda o código do pedido e o status. Hoje só o recebimento físico é aceito. E-mail do operador e do motorista são opcionais: se não vierem, a ação fica num usuário padrão da transportadora. Um reenvio do mesmo status responde que ele já foi aplicado, e o histórico do pedido marca o que entrou pela API.</dd>
+            </div>
+            <div>
+              <dt>Resultado</dt>
+              <dd>O bip externo atualiza o pedido pelo mesmo fluxo interno de recebimento físico, sem duplicar o status.</dd>
             </div>
           </dl>
         </div>
@@ -265,7 +293,7 @@
       <ul class="contact__links">
         <li><a href="https://www.linkedin.com/in/elias379/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
         <li><a href="https://github.com/EliaxZen" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
-        <li><a href="https://wa.me/5561994156912" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
+        <li><a href="https://wa.me/5561992268352" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
         <li><a href="https://instagram.com/elias_.code" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
       </ul>
     </section>
