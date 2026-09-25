@@ -34,6 +34,7 @@
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Principal">
       <a href="#sobre">Sobre</a>
+      <a href="#como-trabalho">Como trabalho</a>
       <a href="#experiencia">Experiência</a>
       <a href="#projetos">Entregas</a>
       <a href="#contato">Contato</a>
@@ -62,6 +63,7 @@
         <p class="hero__sub">Na Log Manager, um TMS de entrega no mesmo dia, com PHP e Laravel.</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#projetos">Ver entregas</a>
+          <a class="btn btn--ghost" href="assets/docs/Elias-Galvao-Curriculo.pdf" target="_blank" rel="noopener">Baixar currículo</a>
           <a class="btn btn--ghost" href="#contato">Entrar em contato</a>
         </div>
       </div>
@@ -76,39 +78,80 @@
         <h2 class="section__title">Sobre</h2>
       </div>
       <div class="about__body">
-        <p class="lead">Desenvolvedor full stack. Desde o fim de 2024, na Log Manager, um TMS de entrega no mesmo dia. O painel da transportadora, o aplicativo do motorista e o painel do vendedor usam o mesmo sistema, ligado a marketplaces como Mercado Livre, Shopee, Magalu e Amazon.</p>
-        <p>O começo foi em telas e relatórios. A maior parte do tempo foi resolução de chamados e bugs em produção, no prazo. Com o tempo, vieram módulo novo e integração.</p>
+        <p class="lead">Sou desenvolvedor full stack. Desde o fim de 2024 trabalho num sistema de logística grande, com muitas tabelas, muito volume de dados e clientes operando em tempo real.</p>
+        <p>Entrei como estagiário fazendo telas e relatórios e hoje, como júnior, cuido de integrações, APIs e módulos novos. No meio do caminho aprendi o que um sistema desse tamanho cobra: consulta bem feita, cuidado com regra sensível, teste antes de subir e resposta rápida quando algo quebra em produção.</p>
         <ol class="skills-list">
-          <li><span class="mono">Integrações</span><span>Laravel e MySQL. O pedido entra, o status volta, e a credencial da integração se renova sozinha.</span></li>
-          <li><span class="mono">Filas</span><span>RabbitMQ para importar, exportar e sincronizar fora do tempo de quem está na tela.</span></li>
-          <li><span class="mono">Desempenho</span><span>Consultas mais leves no MySQL, com índice e cache, e remoção de telas antigas.</span></li>
-          <li><span class="mono">Segurança</span><span>Uma empresa não acessa os dados de outra. Também houve correção de injeção de SQL em um filtro.</span></li>
-          <li><span class="mono">Telas</span><span>Blade, jQuery e DataTables, com filtro, paginação no servidor e exportação.</span></li>
+          <li><span class="mono">Entrega rápida</span><span>Chamados e bugs de clientes em produção resolvidos com agilidade, sem abrir mão de subir com segurança.</span></li>
+          <li><span class="mono">Qualidade</span><span>Teste e revisão como parte do trabalho, não como etapa final, para a tarefa voltar menos do QA.</span></li>
+          <li><span class="mono">Performance</span><span>Leitura de EXPLAIN, índices e consultas otimizadas no Laravel para telas com muito volume.</span></li>
+          <li><span class="mono">Trabalho em equipe</span><span>Revisão de PR, sugestões de correção e alinhamento com o time antes de estruturar algo grande.</span></li>
+          <li><span class="mono">Interface</span><span>Telas mais claras e agradáveis de usar, construídas junto com o time de UI/UX.</span></li>
         </ol>
       </div>
     </section>
 
-    <section class="section stack reveal" aria-labelledby="stack-title">
+    <section class="section process reveal" id="como-trabalho">
       <div class="section__head">
         <p class="section__index mono">02</p>
-        <h2 class="section__title" id="stack-title">Tecnologias</h2>
+        <h2 class="section__title">Como trabalho</h2>
+      </div>
+      <div class="process__body">
+        <p class="proof">O passo a passo que fui construindo em cada entrega, com a orientação da tech lead e dos seniores do time.</p>
+        <ol class="skills-list">
+          <li><span class="mono">Entender</span><span>Leio a demanda, o protótipo e a análise de risco. Quando a regra não está clara, pergunto antes de codar. Suposição errada em regra de negócio custa caro depois.</span></li>
+          <li><span class="mono">Alinhar a estrutura</span><span>Em entregas grandes, converso com o time sobre como organizar o código para não criar problema no futuro: o que reaproveitar, o que isolar e como dividir em partes.</span></li>
+          <li><span class="mono">Isolar o que é sensível</span><span>Mudanças em processamentos críticos vão em branch e PR separados, com um caminho seguro caso algo falhe. Assim a revisão é mais fácil e o rollback, simples.</span></li>
+          <li><span class="mono">Entregar em partes</span><span>Divido módulos grandes em fases pequenas, cada uma validada antes da próxima. Ajustes entram em commits curtos e por assunto.</span></li>
+          <li><span class="mono">Testar e revisar</span><span>Monto o cenário de teste, confiro consultas com EXPLAIN e passo pelo checklist de revisão do time antes de pedir PR. Bug report do QA vira aprendizado para a próxima tarefa.</span></li>
+          <li><span class="mono">Subir e acompanhar</span><span>Depois do deploy, acompanho logs e erros. Se algo aparece, corrijo rápido e registro o que aprendi.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section growth reveal" aria-labelledby="aprendizados-title">
+      <div class="section__head">
+        <p class="section__index mono">03</p>
+        <h2 class="section__title" id="aprendizados-title">O que aprendi</h2>
       </div>
       <dl class="stack__list">
-        <div><dt>Servidor</dt><dd>PHP · Laravel · Eloquent · filas · APIs REST</dd></div>
-        <div><dt>Interface</dt><dd>JavaScript · jQuery · Blade · Bootstrap · DataTables</dd></div>
-        <div><dt>Dados</dt><dd>MySQL · MongoDB · Python · Pandas</dd></div>
-        <div><dt>Mensageria</dt><dd>RabbitMQ</dd></div>
-        <div><dt>Ferramentas</dt><dd>Git · GitHub · revisão de código · Sentry · Jira · Linux · Docker</dd></div>
+        <div>
+          <dt>Performance</dt>
+          <dd>Com o crescimento dos dados, várias telas ficaram lentas no mesmo período. Ainda no estágio, aprendi com um sênior a fazer query tuning no Laravel: ler o EXPLAIN, evitar full scan, usar índices a partir do Eloquent e do Query Builder, separar a contagem da listagem e escrever consultas mais enxutas. Hoje o time pede o EXPLAIN em todo PR que mexe em consulta, e isso virou hábito.</dd>
+        </div>
+        <div>
+          <dt>Qualidade</dt>
+          <dd>A tech lead incentiva o time a reduzir o retorno de bugs do QA. Passei a testar cenários de borda antes de entregar, revisar o próprio diff e deixar o roteiro de teste claro. A tarefa fica menos tempo em desenvolvimento e sobe com mais segurança.</dd>
+        </div>
+        <div>
+          <dt>Regras sensíveis</dt>
+          <dd>Parcerias entre transportadoras e grupos de empresas (matriz e filiais) mexem em quem enxerga e quem é dono de cada pedido. Nesses casos desenvolvo com mais cautela: validação no servidor, testes com mais de um perfil de acesso, revisão de PR mais criteriosa e registro de cada decisão do sistema.</dd>
+        </div>
+        <div>
+          <dt>Produção</dt>
+          <dd>Grande parte do dia é resolver chamados e bugs que os clientes encontram. Aprendi a investigar pelos logs e pelos dados até achar a causa, corrigir rápido e explicar o problema de forma clara para o suporte.</dd>
+        </div>
+        <div>
+          <dt>Interface</dt>
+          <dd>Com o time de UI/UX, aprendi a transformar protótipo em tela real: estados de carregamento, feedback visual na bipagem, travas contra clique duplo e tabelas mais legíveis.</dd>
+        </div>
+        <div>
+          <dt>Time</dt>
+          <dd>Revisei mais de 240 pull requests de colegas, com sugestões de correção e melhoria. Revisar código dos outros me ensinou tanto quanto escrever o meu.</dd>
+        </div>
+        <div>
+          <dt>Autonomia</dt>
+          <dd>No primeiro estágio eu era o único desenvolvedor da empresa. Não havia a quem perguntar: aprendi Python, web scraping e tratamento de dados estudando por conta própria e entregando ao mesmo tempo.</dd>
+        </div>
       </dl>
     </section>
 
     <section class="section experience reveal" id="experiencia">
       <div class="section__head">
-        <p class="section__index mono">03</p>
+        <p class="section__index mono">04</p>
         <h2 class="section__title">Experiência</h2>
       </div>
       <div class="experience__body">
-      <p class="proof">Quase dois anos na Log Manager: mais de 1.800 commits, mais de 1.500 pull requests e mais de 400 entregas em produção.</p>
+      <p class="proof">Quase dois anos na Log Manager: mais de 1.800 commits, mais de 1.500 pull requests, mais de 240 PRs revisados e mais de 400 entregas em produção.</p>
       <ol class="timeline">
         <li class="timeline__item">
           <div class="timeline__meta">
@@ -118,9 +161,11 @@
           <div class="timeline__body">
             <h3>Desenvolvedor full stack júnior</h3>
             <ul>
-              <li>Passagem de ajuste de tela para integração, API e módulo novo, com o sistema no ar.</li>
-              <li>Resolução de chamados e bugs em produção, no prazo.</li>
-              <li>Correção de acesso entre empresas e de painéis que tinham ficado pesados.</li>
+              <li>Mais de 100 chamados de clientes resolvidos em produção, com metade corrigida em até 2 dias depois da abertura. No estágio, a mediana era de 4 dias.</li>
+              <li>Integrações com a Amazon Flash, com uma plataforma logística parceira (pedido entrando e status voltando), com um grande varejista e com as zonas de entrega do Mercado Livre.</li>
+              <li>Módulos novos: Central de Logs, Gestão de Devoluções, API de status para transportadoras e a configuração de um agente de IA que monitora motoristas à noite.</li>
+              <li>Regras sensíveis: posse do pedido entre transportadoras parceiras, grupos de matriz e filiais em seis telas e isolamento de dados entre empresas.</li>
+              <li>Otimização de painéis e relatórios pesados, remoção de cerca de 43 mil linhas de código legado e mais de 240 PRs de colegas revisados.</li>
             </ul>
           </div>
         </li>
@@ -132,8 +177,10 @@
           <div class="timeline__body">
             <h3>Estagiário de TI</h3>
             <ul>
-              <li>Telas e relatórios do dia a dia, com busca e paginação no mesmo padrão.</li>
-              <li>Primeira fila, para importar planilha sem travar a operação.</li>
+              <li>Mais de 160 entregas, entre telas, relatórios e correções de bugs.</li>
+              <li>Busca e paginação padronizadas em mais de 70 tabelas e travas contra clique duplo em cerca de 25 telas.</li>
+              <li>Relatórios de SLA, parcerias e operação por canal, com as primeiras otimizações de consulta aprendidas com um sênior: EXPLAIN, índices e consultas mais enxutas.</li>
+              <li>Primeira fila, para importar planilhas financeiras sem travar a operação, e primeiras regras de permissão para dados financeiros.</li>
             </ul>
           </div>
         </li>
@@ -145,7 +192,9 @@
           <div class="timeline__body">
             <h3>Estagiário de análise de dados e automação para a web</h3>
             <ul>
-              <li>Automação da coleta e do tratamento de dados na web, com Python e Pandas.</li>
+              <li>Primeiro emprego e único desenvolvedor numa empresa que não era de tecnologia: aprendi sozinho, estudando e estagiando ao mesmo tempo.</li>
+              <li>A dona da empresa gostou do meu trabalho e me confiou um projeto dela: uma base de preços de imóveis do DF, que depois expandimos para Goiás, São Paulo e outros estados.</li>
+              <li>Coleta em Python em mais de 25 sites imobiliários, tratamento dos dados com Pandas e planilhas e gráficos no Power BI.</li>
             </ul>
           </div>
         </li>
@@ -163,20 +212,37 @@
       </div>
     </section>
 
+    <section class="section stack reveal" aria-labelledby="stack-title">
+      <div class="section__head">
+        <p class="section__index mono">05</p>
+        <h2 class="section__title" id="stack-title">Tecnologias</h2>
+      </div>
+      <dl class="stack__list">
+        <div><dt>Servidor</dt><dd>PHP · Laravel · Eloquent · filas · APIs REST</dd></div>
+        <div><dt>Interface</dt><dd>JavaScript · jQuery · Blade · Bootstrap · DataTables</dd></div>
+        <div><dt>Dados</dt><dd>MySQL · MongoDB · Python · Pandas · Selenium · Power BI</dd></div>
+        <div><dt>Mensageria</dt><dd>RabbitMQ</dd></div>
+        <div><dt>Ferramentas</dt><dd>Git · GitHub · revisão de código · Sentry · Jira · Linux · Docker</dd></div>
+      </dl>
+    </section>
+
     <section class="section projects reveal" id="projetos">
       <div class="section__head">
-        <p class="section__index mono">04</p>
+        <p class="section__index mono">06</p>
         <h2 class="section__title">Entregas</h2>
       </div>
-      <p class="projects__intro">Quatro entregas maiores na Log Manager. No dia a dia, resolução de chamados e bugs em produção, no prazo. O código é interno. Onde a funcionalidade está documentada para o cliente, o link fica na entrega.</p>
+      <p class="projects__intro">Cinco entregas maiores na Log Manager, contadas pelo processo: o problema, como conduzi, as decisões que mudei no caminho e o resultado. O código é interno. Onde a funcionalidade tem documentação pública para o cliente, o link está na entrega.</p>
 
       <article class="case">
         <p class="mono case__index">01</p>
         <div class="project__info">
-          <h3>Amazon Flash</h3>
-          <p>A Amazon Flash entrega no mesmo dia. A transportadora precisava receber esses pedidos no painel, como já acontecia com Mercado Livre e Shopee.</p>
-          <p>O vendedor preenche os dados e autoriza a integração na Amazon. O link fica na tela de clientes da transportadora, e a espera aparece numa tela de carregamento. Se ele cadastrar um e-mail em Perfil, em Etiquetas Amazon, a etiqueta chega sozinha.</p>
-          <p>O desenvolvimento foi em Laravel e MySQL. A conta nasce nesse canal, e a busca usa o documento para não sobrescrever outra conta. O token fica em cache até expirar e se renova sozinho. O status volta por webhook, numa fila do RabbitMQ. O código de rastreio desse canal segue o padrão da Amazon, sem alterar os outros.</p>
+          <h3>Integração com a Amazon Flash</h3>
+          <dl class="case__points">
+            <div><dt>Problema</dt><dd>As transportadoras queriam receber os pedidos de entrega no mesmo dia da Amazon no painel, como já acontecia com outros marketplaces.</dd></div>
+            <div><dt>Como conduzi</dt><dd>Estudei as integrações que já existiam e alinhei com o dev que tinha feito uma parecida antes. Dividi em partes: cadastro do vendedor, autorização, recebimento de pedidos e envio de status. Cada parte subiu e foi validada em homologação antes da próxima.</dd></div>
+            <div><dt>Decisões e ajustes</dt><dd>Depois de acompanhar os primeiros vendedores em produção, ajustei o fluxo: a conta só é criada quando a autorização termina, o primeiro status espera um pouco para o marketplace registrar o pedido, e a busca pelo vendedor passou a usar o documento, para nunca sobrescrever outra conta. Numa investigação, os logs mostraram que um erro era limite do parceiro, não bug nosso.</dd></div>
+            <div><dt>Resultado</dt><dd>O vendedor se integra sozinho por um link, e os pedidos já chegam no painel da transportadora.</dd></div>
+          </dl>
           <p class="project__links">
             <a class="text-link" href="https://ajuda.logmanager.com.br/docs/como-integrar-um-vendedor-da-amazon-ao-seu-painel/" target="_blank" rel="noopener noreferrer">Como o cliente usa ↗</a>
           </p>
@@ -187,9 +253,12 @@
         <p class="mono case__index">02</p>
         <div class="project__info">
           <h3>Central de Logs</h3>
-          <p>Quando alguém mudava um cliente, um preço ou uma permissão, era difícil saber quem tinha feito isso.</p>
-          <p>A central mostra a alteração, com o antes e o depois, na tela da transportadora. Se a equipe da Log Manager altera o painel do cliente, o registro fica no nome de quem alterou.</p>
-          <p>Cada evento vai para o MySQL, com o campo antigo e o novo em JSON. A gravação sai por fila no RabbitMQ, para a tela não esperar, e uma falha no log não impede o cadastro. O filtro usa DataTables, com data, tipo de ação e o cadastro afetado combinados.</p>
+          <dl class="case__points">
+            <div><dt>Problema</dt><dd>Quando alguém alterava um cliente, um preço ou uma permissão, era difícil saber quem tinha feito e o que mudou.</dd></div>
+            <div><dt>Como conduzi</dt><dd>Comecei pelos cadastros mais usados e fui ampliando aos poucos para mais de dez áreas do sistema, sempre mostrando o antes e o depois de forma legível para o cliente.</dd></div>
+            <div><dt>Decisões e ajustes</dt><dd>A primeira versão gravava o log na hora; depois passei a gravação para fila, para a tela não esperar, e uma falha no log nunca impede a ação principal. Numa entrega seguinte, corrigi a autoria: alterações feitas pela nossa equipe no painel do cliente passaram a aparecer no nome de quem realmente alterou. Tirei um cache que misturava resultados de busca e, com o volume crescendo, criei índices para os filtros combinados.</dd></div>
+            <div><dt>Resultado</dt><dd>Suporte e clientes rastreiam qualquer alteração em segundos.</dd></div>
+          </dl>
           <p class="project__links">
             <a class="text-link" href="https://ajuda.logmanager.com.br/docs/central-de-logs/" target="_blank" rel="noopener noreferrer">Como o cliente usa ↗</a>
           </p>
@@ -199,10 +268,13 @@
       <article class="case">
         <p class="mono case__index">03</p>
         <div class="project__info">
-          <h3>Devolução de Pedidos</h3>
-          <p>A devolução de um pedido estava espalhada: bipar a etiqueta, mudar o status, imprimir e abrir um chamado.</p>
-          <p>O fluxo foi reunido em uma tela. Ao bipar, o pedido certo pisca em verde e o status errado, em vermelho. Ao gerar o romaneio, o pedido vai para Em processo de devolução. A transportadora escolhe Devolução a partir da etiqueta original ou Devolução a partir de nova etiqueta. No fim, o chamado abre sozinho.</p>
-          <p>A tela é Laravel, com Blade e jQuery, no mesmo modelo da saída de pedidos. A configuração fica salva por transportadora. A etiqueta sai em A4 ou ZPL, com QR code. O chamado nasce numa transação do MySQL, não abre de novo para o mesmo pedido, e uma falha nele não desfaz o romaneio.</p>
+          <h3>Gestão de Devoluções</h3>
+          <dl class="case__points">
+            <div><dt>Problema</dt><dd>A devolução de pedidos estava espalhada em várias telas e passos manuais: bipar, mudar o status, imprimir etiqueta e abrir chamado.</dd></div>
+            <div><dt>Como conduzi</dt><dd>Reaproveitei a lógica de uma tela que a operação já conhecia e segui o protótipo do time de UI/UX. Entreguei em quatro fases, cada uma validada com o QA: bipagem, configuração por transportadora, impressão e chamados automáticos.</dd></div>
+            <div><dt>Decisões e ajustes</dt><dd>O chamado de devolução abria sozinho, sem duplicar e sem desfazer o romaneio se falhasse. Com o uso real, vimos que ele estava enchendo o suporte, e numa versão seguinte a abertura automática saiu. Também entrou feedback visual na bipagem (verde e vermelho) e a opção de restaurar um bipe errado.</dd></div>
+            <div><dt>Resultado</dt><dd>Um fluxo único, guiado e rastreável, do bipe à etiqueta.</dd></div>
+          </dl>
         </div>
       </article>
 
@@ -210,13 +282,48 @@
         <p class="mono case__index">04</p>
         <div class="project__info">
           <h3>Status do pedido pela API</h3>
-          <p>A transportadora já registrava o pacote no sistema dela. Alguém ainda precisava lançar o recebimento físico na tela.</p>
-          <p>A API recebe esse aviso e atualiza o pedido. Se o mesmo aviso chegar de novo, a resposta é que o status já foi aplicado.</p>
-          <p>Ficou no Laravel, no mesmo grupo de rotas e com o mesmo token das outras APIs da transportadora. O pedido precisa ser daquela transportadora, e um status final, como entregue ou cancelado, bloqueia o recebimento. Se o recebimento chegar sem a coleta, a coleta entra um segundo antes. Os dois seguem o romaneio que já existia, numa fila do RabbitMQ, em vez de repetir a regra de status na API.</p>
+          <dl class="case__points">
+            <div><dt>Problema</dt><dd>Uma transportadora parceira já registrava os pacotes no próprio sistema, mas alguém ainda precisava lançar o recebimento na nossa tela, cerca de 2.500 pedidos por dia.</dd></div>
+            <div><dt>Como conduzi</dt><dd>Segui o padrão de autenticação e segurança das APIs existentes, defini um limite de requisições que aguentasse o pico sem expor o sistema e tratei reenvios para não duplicar status.</dd></div>
+            <div><dt>Decisões e ajustes</dt><dd>A primeira versão aplicava a regra de status dentro da própria API. Na revisão seguinte, troquei para usar o processamento de status que o sistema já tinha, eliminando cerca de 550 linhas duplicadas e garantindo o mesmo comportamento da tela.</dd></div>
+            <div><dt>Resultado</dt><dd>Recebimento automático, com a origem marcada no histórico do pedido e registro na Central de Logs.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case">
+        <p class="mono case__index">05</p>
+        <div class="project__info">
+          <h3>Otimização do relatório de operações</h3>
+          <dl class="case__points">
+            <div><dt>Problema</dt><dd>A principal tela de acompanhamento da operação estava lenta, e os números dos indicadores não batiam com a listagem logo abaixo.</dd></div>
+            <div><dt>Como conduzi</dt><dd>Li o EXPLAIN das consultas, achei as leituras de tabela inteira e comparei, um por um, como cada indicador e cada lista era calculado.</dd></div>
+            <div><dt>Decisões e ajustes</dt><dd>Cada indicador passou a ter uma única consulta, usada tanto na contagem quanto na lista, o que eliminou a divergência. Entraram índice direcionado, contagem mais leve e um cache curto. Testei uma paginação alternativa, vi que não compensava e voltei ao padrão do time. Antes disso, removi as versões antigas da tela, cerca de 36 mil linhas de código legado.</dd></div>
+            <div><dt>Resultado</dt><dd>Tela mais rápida, menos carga no banco e números consistentes para a operação.</dd></div>
+          </dl>
         </div>
       </article>
 
       <p class="projects__label">Código aberto</p>
+      <article class="case">
+        <p class="mono case__index">06</p>
+        <div class="project__info">
+          <p class="mono project__tech">Python · requests · BeautifulSoup · Selenium · Pandas · Power BI</p>
+          <h3>Base de preços de imóveis</h3>
+          <dl class="case__points">
+            <div><dt>Problema</dt><dd>No meu primeiro estágio, a dona da empresa queria acompanhar o mercado de imóveis do DF: preço, localização, tipo e metragem, espalhados em dezenas de sites de imobiliárias.</dd></div>
+            <div><dt>Como conduzi</dt><dd>Eu era o único desenvolvedor, então aprendi sozinho. Comecei por um site, montei o fluxo de coleta, tratamento e planilha, e fui repetindo para os outros. O projeto cresceu do DF para Goiás, São Paulo e outros estados, com mais de 25 sites.</dd></div>
+            <div><dt>Decisões e ajustes</dt><dd>Sites simples com requests e BeautifulSoup; os que carregam por JavaScript, com Selenium. Para aguentar milhares de páginas, coleta em paralelo com nova tentativa e espera crescente, para não ser bloqueado. Os dados chegavam bagunçados, então criei scripts em Pandas para limpar preço e área, padronizar bairros e setores e geolocalizar endereços.</dd></div>
+            <div><dt>Resultado</dt><dd>Planilhas mensais por site e painéis no Power BI para comparar preços por região, venda e aluguel.</dd></div>
+          </dl>
+          <p class="project__links">
+            <a class="text-link" href="https://github.com/EliaxZen/web-scrapping-python" target="_blank" rel="noopener noreferrer">Coleta DF e GO ↗</a>
+            <a class="text-link" href="https://github.com/EliaxZen/script-para-tratar-dados-de-imoveis-python" target="_blank" rel="noopener noreferrer">Tratamento dos dados ↗</a>
+            <a class="text-link" href="https://github.com/EliaxZen/web_scrapping_rj_python" target="_blank" rel="noopener noreferrer">Coleta RJ ↗</a>
+          </p>
+        </div>
+      </article>
+
       <article class="project">
         <a class="project__media" href="https://quiz-created-by-elias.netlify.app/" target="_blank" rel="noopener noreferrer">
           <img src="assets/img/quiz.jpg" alt="Tela do projeto Quiz" loading="lazy" width="1400" height="680" />
@@ -234,7 +341,7 @@
     </section>
 
     <section class="contact reveal" id="contato">
-      <p class="section__index mono">05</p>
+      <p class="section__index mono">07</p>
       <h2 class="contact__title">Vamos conversar?</h2>
       <p class="contact__sub">Aberto a oportunidades, projetos e troca de ideias.</p>
       <a class="contact__email" href="mailto:galvaoalveselias@gmail.com">galvaoalveselias@gmail.com</a>
@@ -243,6 +350,7 @@
         <li><a href="https://github.com/EliaxZen" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
         <li><a href="https://wa.me/5561992268352" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
         <li><a href="https://instagram.com/elias_.code" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+        <li><a href="assets/docs/Elias-Galvao-Curriculo.pdf" download>Currículo (PDF) ↓</a></li>
       </ul>
     </section>
   </main>
