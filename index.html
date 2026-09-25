@@ -82,7 +82,7 @@
           <li><span class="mono">Integrações</span><span>Laravel e MySQL. O pedido entra, o status volta, e a credencial da integração se renova sozinha.</span></li>
           <li><span class="mono">Filas</span><span>RabbitMQ para importar, exportar e sincronizar fora do tempo de quem está na tela.</span></li>
           <li><span class="mono">Desempenho</span><span>Consultas mais leves no MySQL, com índice e cache, e remoção de telas antigas.</span></li>
-          <li><span class="mono">Segurança</span><span>Uma empresa não acessa os dados de outra. Também corrigi filtro que aceitava comando indevido no banco.</span></li>
+          <li><span class="mono">Segurança</span><span>Uma empresa não acessa os dados de outra. Também corrigi injeção de SQL em um filtro.</span></li>
           <li><span class="mono">Telas</span><span>Blade, jQuery e DataTables, com filtro, paginação no servidor e exportação.</span></li>
         </ol>
       </div>
@@ -108,7 +108,7 @@
         <h2 class="section__title">Experiência</h2>
       </div>
       <div class="experience__body">
-      <p class="proof">Quase dois anos na Log Manager: mais de 1.800 contribuições no código, mais de 1.500 revisões publicadas e mais de 400 entregas em produção.</p>
+      <p class="proof">Quase dois anos na Log Manager: mais de 1.800 commits, mais de 1.500 pull requests e mais de 400 entregas em produção.</p>
       <ol class="timeline">
         <li class="timeline__item">
           <div class="timeline__meta">
@@ -118,10 +118,8 @@
           <div class="timeline__body">
             <h3>Desenvolvedor full stack júnior</h3>
             <ul>
-              <li>Integração da Amazon Flash em Laravel: cadastro do vendedor, autorização e devolução do status em fila.</li>
-              <li>Tela de devolução em Laravel e MySQL, com a regra da transportadora e o chamado aberto numa transação.</li>
-              <li>API no mesmo login das outras APIs da transportadora, sem gravar o mesmo status duas vezes.</li>
-              <li>Painéis mais leves no MySQL e correção de acesso entre empresas.</li>
+              <li>Passei de ajuste de tela para integração, API e módulo novo, com o sistema no ar.</li>
+              <li>Corrigi acesso entre empresas e painéis que tinham ficado pesados.</li>
             </ul>
           </div>
         </li>
@@ -133,10 +131,8 @@
           <div class="timeline__body">
             <h3>Estagiário de TI</h3>
             <ul>
-              <li>Central de logs em MySQL, com o antes e o depois da alteração, gravada em fila.</li>
-              <li>Busca e paginação no mesmo padrão, com DataTables, em dezenas de telas.</li>
-              <li>Importação de planilha validada linha a linha e processada no RabbitMQ.</li>
-              <li>Relatórios com filtro e exportação para planilha.</li>
+              <li>Telas e relatórios do dia a dia, com busca e paginação no mesmo padrão.</li>
+              <li>Primeira fila, para importar planilha sem travar a operação.</li>
             </ul>
           </div>
         </li>
