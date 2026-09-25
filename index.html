@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0A93C5" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Elias Galvão — Desenvolvedor full stack" />
-  <meta property="og:description" content="Desenvolvo sistemas de logística que a operação usa todos os dias. PHP e Laravel, na Log Manager." />
+  <meta property="og:description" content="Sistemas de logística que a operação usa todos os dias. PHP e Laravel, na Log Manager." />
   <meta property="og:image" content="https://my-portfolio-created-by-elias.netlify.app/assets/img/elias.jpg" />
   <meta property="og:url" content="https://my-portfolio-created-by-elias.netlify.app/" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -58,11 +58,11 @@
           <span class="line"><span>Elias</span></span>
           <span class="line"><span>Galvão</span></span>
         </h1>
-        <p class="hero__headline">Desenvolvo sistemas de logística que a operação usa todos os dias.</p>
+        <p class="hero__headline">Sistemas de logística que a operação usa todos os dias.</p>
         <p class="hero__sub">Na Log Manager, um TMS de entrega no mesmo dia, com PHP e Laravel.</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#projetos">Ver entregas</a>
-          <a class="btn btn--ghost" href="#contato">Fale comigo</a>
+          <a class="btn btn--ghost" href="#contato">Entrar em contato</a>
         </div>
       </div>
       <figure class="hero__photo">
@@ -76,13 +76,13 @@
         <h2 class="section__title">Sobre</h2>
       </div>
       <div class="about__body">
-        <p class="lead">Sou desenvolvedor full stack. Desde o fim de 2024, trabalho na Log Manager, um TMS de entrega no mesmo dia. O painel da transportadora, o aplicativo do motorista e o painel do vendedor usam o mesmo sistema, ligado a marketplaces como Mercado Livre, Shopee, Magalu e Amazon.</p>
-        <p>Comecei por telas e relatórios. A maior parte do tempo foi em chamados e bugs do sistema em produção, no prazo. Com o tempo, passei a entregar módulo novo e integração.</p>
+        <p class="lead">Desenvolvedor full stack. Desde o fim de 2024, na Log Manager, um TMS de entrega no mesmo dia. O painel da transportadora, o aplicativo do motorista e o painel do vendedor usam o mesmo sistema, ligado a marketplaces como Mercado Livre, Shopee, Magalu e Amazon.</p>
+        <p>O começo foi em telas e relatórios. A maior parte do tempo foi resolução de chamados e bugs em produção, no prazo. Com o tempo, vieram módulo novo e integração.</p>
         <ol class="skills-list">
           <li><span class="mono">Integrações</span><span>Laravel e MySQL. O pedido entra, o status volta, e a credencial da integração se renova sozinha.</span></li>
           <li><span class="mono">Filas</span><span>RabbitMQ para importar, exportar e sincronizar fora do tempo de quem está na tela.</span></li>
           <li><span class="mono">Desempenho</span><span>Consultas mais leves no MySQL, com índice e cache, e remoção de telas antigas.</span></li>
-          <li><span class="mono">Segurança</span><span>Uma empresa não acessa os dados de outra. Também corrigi injeção de SQL em um filtro.</span></li>
+          <li><span class="mono">Segurança</span><span>Uma empresa não acessa os dados de outra. Também houve correção de injeção de SQL em um filtro.</span></li>
           <li><span class="mono">Telas</span><span>Blade, jQuery e DataTables, com filtro, paginação no servidor e exportação.</span></li>
         </ol>
       </div>
@@ -118,9 +118,9 @@
           <div class="timeline__body">
             <h3>Desenvolvedor full stack júnior</h3>
             <ul>
-              <li>Passei de ajuste de tela para integração, API e módulo novo, com o sistema no ar.</li>
-              <li>Resolvi chamados e bugs em produção, no prazo.</li>
-              <li>Corrigi acesso entre empresas e painéis que tinham ficado pesados.</li>
+              <li>Passagem de ajuste de tela para integração, API e módulo novo, com o sistema no ar.</li>
+              <li>Resolução de chamados e bugs em produção, no prazo.</li>
+              <li>Correção de acesso entre empresas e de painéis que tinham ficado pesados.</li>
             </ul>
           </div>
         </li>
@@ -168,7 +168,7 @@
         <p class="section__index mono">04</p>
         <h2 class="section__title">Entregas</h2>
       </div>
-      <p class="projects__intro">Quatro entregas maiores na Log Manager. No dia a dia, o trabalho foi em chamados e bugs, no prazo. O código é interno. Onde a funcionalidade está documentada para o cliente, deixei o link.</p>
+      <p class="projects__intro">Quatro entregas maiores na Log Manager. No dia a dia, resolução de chamados e bugs em produção, no prazo. O código é interno. Onde a funcionalidade está documentada para o cliente, o link fica na entrega.</p>
 
       <article class="case">
         <p class="mono case__index">01</p>
@@ -176,7 +176,7 @@
           <h3>Amazon Flash</h3>
           <p>A Amazon Flash entrega no mesmo dia. A transportadora precisava receber esses pedidos no painel, como já acontecia com Mercado Livre e Shopee.</p>
           <p>O vendedor preenche os dados e autoriza a integração na Amazon. O link fica na tela de clientes da transportadora, e a espera aparece numa tela de carregamento. Se ele cadastrar um e-mail em Perfil, em Etiquetas Amazon, a etiqueta chega sozinha.</p>
-          <p>Fiz em Laravel e MySQL. A conta nasce nesse canal, e o token da integração fica em cache até renovar. O status volta por webhook, numa fila do RabbitMQ, e o código de rastreio desse canal segue o padrão da Amazon sem alterar os outros.</p>
+          <p>O desenvolvimento foi em Laravel e MySQL. A conta nasce nesse canal, e a busca usa o documento para não sobrescrever outra conta. O token fica em cache até expirar e se renova sozinho. O status volta por webhook, numa fila do RabbitMQ. O código de rastreio desse canal segue o padrão da Amazon, sem alterar os outros.</p>
           <p class="project__links">
             <a class="text-link" href="https://ajuda.logmanager.com.br/docs/como-integrar-um-vendedor-da-amazon-ao-seu-painel/" target="_blank" rel="noopener noreferrer">Como o cliente usa ↗</a>
           </p>
@@ -189,7 +189,7 @@
           <h3>Central de Logs</h3>
           <p>Quando alguém mudava um cliente, um preço ou uma permissão, era difícil saber quem tinha feito isso.</p>
           <p>A central mostra a alteração, com o antes e o depois, na tela da transportadora. Se a equipe da Log Manager altera o painel do cliente, o registro fica no nome de quem alterou.</p>
-          <p>Os eventos vão para uma tabela no MySQL, com o campo antigo e o novo em JSON. A gravação sai por fila no RabbitMQ, para a tela não esperar. O filtro usa DataTables: data, tipo de ação e o cadastro afetado.</p>
+          <p>Cada evento vai para o MySQL, com o campo antigo e o novo em JSON. A gravação sai por fila no RabbitMQ, para a tela não esperar, e uma falha no log não impede o cadastro. O filtro usa DataTables, com data, tipo de ação e o cadastro afetado combinados.</p>
           <p class="project__links">
             <a class="text-link" href="https://ajuda.logmanager.com.br/docs/central-de-logs/" target="_blank" rel="noopener noreferrer">Como o cliente usa ↗</a>
           </p>
@@ -201,8 +201,8 @@
         <div class="project__info">
           <h3>Devolução de Pedidos</h3>
           <p>A devolução de um pedido estava espalhada: bipar a etiqueta, mudar o status, imprimir e abrir um chamado.</p>
-          <p>Juntei isso em uma tela. Ao bipar, o pedido certo pisca em verde e o status errado, em vermelho. Ao gerar o romaneio, o pedido vai para Em processo de devolução. A transportadora escolhe Devolução a partir da etiqueta original ou Devolução a partir de nova etiqueta. No fim, o chamado abre sozinho.</p>
-          <p>A tela é Laravel, com Blade e jQuery, no mesmo modelo da saída de pedidos. A configuração fica salva por transportadora, e a etiqueta sai em A4 ou ZPL. O chamado é criado numa transação do MySQL e não abre de novo para o mesmo pedido.</p>
+          <p>O fluxo foi reunido em uma tela. Ao bipar, o pedido certo pisca em verde e o status errado, em vermelho. Ao gerar o romaneio, o pedido vai para Em processo de devolução. A transportadora escolhe Devolução a partir da etiqueta original ou Devolução a partir de nova etiqueta. No fim, o chamado abre sozinho.</p>
+          <p>A tela é Laravel, com Blade e jQuery, no mesmo modelo da saída de pedidos. A configuração fica salva por transportadora. A etiqueta sai em A4 ou ZPL, com QR code. O chamado nasce numa transação do MySQL, não abre de novo para o mesmo pedido, e uma falha nele não desfaz o romaneio.</p>
         </div>
       </article>
 
@@ -210,9 +210,9 @@
         <p class="mono case__index">04</p>
         <div class="project__info">
           <h3>Status do pedido pela API</h3>
-          <p>A transportadora já registrava o pacote no sistema dela. Alguém ainda precisava lançar o recebimento físico na nossa tela.</p>
-          <p>A API recebe esse aviso e atualiza o pedido. Se o mesmo aviso chegar de novo, o status não duplica.</p>
-          <p>Ficou no Laravel, no mesmo grupo de rotas e com o mesmo token das outras APIs da transportadora. O pedido segue o fluxo interno de recebimento físico, e o histórico marca o que veio de fora. Se o aviso se repetir, a API responde que aquele status já foi aplicado.</p>
+          <p>A transportadora já registrava o pacote no sistema dela. Alguém ainda precisava lançar o recebimento físico na tela.</p>
+          <p>A API recebe esse aviso e atualiza o pedido. Se o mesmo aviso chegar de novo, a resposta é que o status já foi aplicado.</p>
+          <p>Ficou no Laravel, no mesmo grupo de rotas e com o mesmo token das outras APIs da transportadora. O pedido precisa ser daquela transportadora, e um status final, como entregue ou cancelado, bloqueia o recebimento. Se o recebimento chegar sem a coleta, a coleta entra um segundo antes. Os dois seguem o romaneio que já existia, numa fila do RabbitMQ, em vez de repetir a regra de status na API.</p>
         </div>
       </article>
 
@@ -224,7 +224,7 @@
         <div class="project__info">
           <p class="mono project__tech">HTML · CSS · JavaScript</p>
           <h3>Quiz</h3>
-          <p>Um quiz que fiz para praticar interface. Dá para ver funcionando e olhar o código.</p>
+          <p>Um quiz para praticar interface. Dá para ver funcionando e olhar o código.</p>
           <p class="project__links">
             <a class="text-link" href="https://quiz-created-by-elias.netlify.app/" target="_blank" rel="noopener noreferrer">Ver funcionando ↗</a>
             <a class="text-link" href="https://github.com/EliaxZen/Quiz" target="_blank" rel="noopener noreferrer">Código ↗</a>
@@ -236,7 +236,7 @@
     <section class="contact reveal" id="contato">
       <p class="section__index mono">05</p>
       <h2 class="contact__title">Vamos conversar?</h2>
-      <p class="contact__sub">Estou aberto a oportunidades, projetos e troca de ideias.</p>
+      <p class="contact__sub">Aberto a oportunidades, projetos e troca de ideias.</p>
       <a class="contact__email" href="mailto:galvaoalveselias@gmail.com">galvaoalveselias@gmail.com</a>
       <ul class="contact__links">
         <li><a href="https://www.linkedin.com/in/elias379/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
