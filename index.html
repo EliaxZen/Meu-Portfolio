@@ -35,7 +35,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Principal">
       <a href="#sobre">Sobre</a>
       <a href="#experiencia">Experiência</a>
-      <a href="#projetos">Projetos</a>
+      <a href="#projetos">Entregas</a>
       <a href="#contato">Contato</a>
     </nav>
     <div class="header-actions">
@@ -61,7 +61,7 @@
         <p class="hero__headline">Construo sistemas web que aguentam produção, do banco de dados à interface.</p>
         <p class="hero__sub">PHP, Laravel, MySQL e JavaScript em plataformas SaaS de alto volume, com APIs, integrações e filas.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+          <a class="btn btn--primary" href="#projetos">Ver entregas</a>
           <a class="btn btn--ghost" href="#contato">Fale comigo</a>
         </div>
       </div>
@@ -95,7 +95,7 @@
       </div>
       <dl class="stack__list">
         <div><dt>Back-end</dt><dd>PHP · Laravel · Eloquent · Jobs/Queues · APIs REST</dd></div>
-        <div><dt>Front-end</dt><dd>JavaScript · TypeScript · jQuery · Blade · Bootstrap · DataTables · React</dd></div>
+        <div><dt>Front-end</dt><dd>JavaScript · jQuery · Blade · Bootstrap · DataTables</dd></div>
         <div><dt>Dados</dt><dd>MySQL · MongoDB · Python · Pandas</dd></div>
         <div><dt>Mensageria</dt><dd>RabbitMQ</dd></div>
         <div><dt>Ferramentas</dt><dd>Git · GitHub · Code review · Sentry · Jira · Linux · Docker</dd></div>
@@ -107,6 +107,8 @@
         <p class="section__index mono">03</p>
         <h2 class="section__title">Experiência</h2>
       </div>
+      <div class="experience__body">
+      <p class="proof">De outubro de 2024 a setembro de 2026, na Log Manager: mais de 1.800 commits, mais de 1.500 pull requests e mais de 400 entregas em produção.</p>
       <ol class="timeline">
         <li class="timeline__item">
           <div class="timeline__meta">
@@ -162,76 +164,83 @@
           </div>
         </li>
       </ol>
+      </div>
     </section>
 
     <section class="section projects reveal" id="projetos">
       <div class="section__head">
         <p class="section__index mono">04</p>
-        <h2 class="section__title">Projetos pessoais</h2>
+        <h2 class="section__title">Entregas</h2>
       </div>
-      <p class="projects__intro">Projetos de estudo que marcaram minha evolução, do primeiro HTML à lógica de programação.</p>
+      <p class="projects__intro">Três entregas em produção na Log Manager, numa plataforma de logística que conecta transportadoras, sellers e marketplaces. O código é interno.</p>
 
-      <article class="project">
-        <a class="project__media" href="https://compradepizzas.netlify.app/" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/pizzas.jpg" alt="Tela do projeto Compra de Pizzas" loading="lazy" width="881" height="437" />
-        </a>
+      <article class="case">
+        <p class="mono case__index">01</p>
         <div class="project__info">
-          <p class="mono project__tech">HTML · CSS · JavaScript</p>
-          <h3>Compra de Pizzas</h3>
-          <p>Cardápio e carrinho montados inteiramente via JavaScript, com cálculo de desconto em tempo real e layout 100% responsivo.</p>
-          <p class="project__links">
-            <a class="text-link" href="https://compradepizzas.netlify.app/" target="_blank" rel="noopener noreferrer">Ver online ↗</a>
-            <a class="text-link" href="https://github.com/EliaxZen/Projeto-Compra-de-Pizzas" target="_blank" rel="noopener noreferrer">Código ↗</a>
-          </p>
+          <p class="mono project__tech">Laravel · MySQL · PDF · ZPL</p>
+          <h3>Módulo de devoluções</h3>
+          <dl class="case__points">
+            <div>
+              <dt>Problema</dt>
+              <dd>A operação devolvia pedidos sem um fluxo único de conferência, etiqueta e chamado.</dd>
+            </div>
+            <div>
+              <dt>O que fiz</dt>
+              <dd>Construi o módulo do zero: bipagem validada pelo status do pedido, romaneio, etiquetas PDF e ZPL com QR code, e abertura de chamado com prazo dentro de uma transação, em fases.</dd>
+            </div>
+            <div>
+              <dt>Resultado</dt>
+              <dd>A devolução passou a sair da tela, com regra por empresa e sem chamado duplicado.</dd>
+            </div>
+          </dl>
         </div>
       </article>
 
-      <article class="project">
-        <a class="project__media" href="https://battlegamerpgwithfunctionalprograming.netlify.app/" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/battle-rpg.jpg" alt="Tela do projeto Battle Game RPG" loading="lazy" width="818" height="425" />
-        </a>
+      <article class="case">
+        <p class="mono case__index">02</p>
         <div class="project__info">
-          <p class="mono project__tech">JavaScript · Funcional · POO</p>
-          <h3>Battle Game RPG</h3>
-          <p>Meu primeiro jogo, escrito em duas versões: uma com programação funcional e outra orientada a objetos com classes, para comparar os paradigmas.</p>
-          <p class="project__links">
-            <a class="text-link" href="https://battlegamerpgwithfunctionalprograming.netlify.app/" target="_blank" rel="noopener noreferrer">Ver online ↗</a>
-            <a class="text-link" href="https://github.com/EliaxZen/Battle-Game-RPG-com-Programacao-Funcional" target="_blank" rel="noopener noreferrer">Código (funcional) ↗</a>
-            <a class="text-link" href="https://github.com/EliaxZen/Battle-Game-RPG-com-POO" target="_blank" rel="noopener noreferrer">Código (POO) ↗</a>
-          </p>
+          <p class="mono project__tech">Laravel · MySQL · filas</p>
+          <h3>Central de logs de auditoria</h3>
+          <dl class="case__points">
+            <div>
+              <dt>Problema</dt>
+              <dd>Suporte e operação não tinham um registro claro de quem alterou cadastro, preço, permissão ou configuração.</dd>
+            </div>
+            <div>
+              <dt>O que fiz</dt>
+              <dd>Criei a trilha com o antes e o depois em mais de dez fluxos. A gravação foi para a fila, e a autoria continua certa quando o suporte entra na conta do cliente.</dd>
+            </div>
+            <div>
+              <dt>Resultado</dt>
+              <dd>Dá para saber quem mudou o quê. A gravação do log deixou de estar copiada em vários pontos do sistema.</dd>
+            </div>
+          </dl>
         </div>
       </article>
 
-      <article class="project">
-        <a class="project__media" href="https://piano-funcional-com-js.netlify.app/" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/piano.jpg" alt="Tela do projeto Piano" loading="lazy" width="1400" height="680" />
-        </a>
+      <article class="case">
+        <p class="mono case__index">03</p>
         <div class="project__info">
-          <p class="mono project__tech">HTML · CSS · JavaScript</p>
-          <h3>Piano</h3>
-          <p>Começou como um layout só em HTML e CSS e virou um piano tocável, com sons em cada tecla e responsivo em qualquer tela.</p>
-          <p class="project__links">
-            <a class="text-link" href="https://piano-funcional-com-js.netlify.app/" target="_blank" rel="noopener noreferrer">Ver online ↗</a>
-            <a class="text-link" href="https://github.com/EliaxZen/Piano-funcional-com-JS" target="_blank" rel="noopener noreferrer">Código ↗</a>
-          </p>
+          <p class="mono project__tech">API REST · RabbitMQ · MySQL</p>
+          <h3>API de status para transportadoras</h3>
+          <dl class="case__points">
+            <div>
+              <dt>Problema</dt>
+              <dd>Transportadoras parceiras precisavam atualizar o status do pedido sem usar a tela interna.</dd>
+            </div>
+            <div>
+              <dt>O que fiz</dt>
+              <dd>Desenhei a API com token, limite de requisições, recusa do que já tinha sido processado e checagem de que o pedido é de quem chama. O processamento entrou na fila que já existia.</dd>
+            </div>
+            <div>
+              <dt>Resultado</dt>
+              <dd>Os parceiros ganharam um contrato estável, e o pedido segue o mesmo caminho do restante da operação.</dd>
+            </div>
+          </dl>
         </div>
       </article>
 
-      <article class="project">
-        <a class="project__media" href="https://quadro-de-desenho-created-by-elias.netlify.app/" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/quadro-desenho.jpg" alt="Tela do projeto Quadro de Desenho" loading="lazy" width="1400" height="680" />
-        </a>
-        <div class="project__info">
-          <p class="mono project__tech">JavaScript · Canvas API</p>
-          <h3>Quadro de Desenho</h3>
-          <p>Quadro de desenho livre com Canvas API, manipulando eventos do mouse e o contexto de desenho pelo JavaScript.</p>
-          <p class="project__links">
-            <a class="text-link" href="https://quadro-de-desenho-created-by-elias.netlify.app/" target="_blank" rel="noopener noreferrer">Ver online ↗</a>
-            <a class="text-link" href="https://github.com/EliaxZen/Quadro-de-Desenho-com-JS" target="_blank" rel="noopener noreferrer">Código ↗</a>
-          </p>
-        </div>
-      </article>
-
+      <p class="projects__label">Código aberto</p>
       <article class="project">
         <a class="project__media" href="https://quiz-created-by-elias.netlify.app/" target="_blank" rel="noopener noreferrer">
           <img src="assets/img/quiz.jpg" alt="Tela do projeto Quiz" loading="lazy" width="1400" height="680" />
@@ -239,7 +248,7 @@
         <div class="project__info">
           <p class="mono project__tech">HTML · CSS · JavaScript</p>
           <h3>Quiz</h3>
-          <p>Quiz animado e responsivo, com as perguntas separadas da lógica para facilitar incluir, editar ou remover questões.</p>
+          <p>Estudo de interface: quiz animado e responsivo, com as perguntas separadas da lógica para incluir, editar ou remover questões sem mexer no fluxo.</p>
           <p class="project__links">
             <a class="text-link" href="https://quiz-created-by-elias.netlify.app/" target="_blank" rel="noopener noreferrer">Ver online ↗</a>
             <a class="text-link" href="https://github.com/EliaxZen/Quiz" target="_blank" rel="noopener noreferrer">Código ↗</a>
